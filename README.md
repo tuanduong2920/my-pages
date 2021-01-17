@@ -1,5 +1,6 @@
 # Note
-Author: Tuan Duong .
+Author: Tuan Duong 
+`
 Email: tuanduong2920@gamil.com
 
 
