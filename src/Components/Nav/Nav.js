@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Collapse } from "reactstrap";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useRouteMatch } from "react-router-dom";
 
 const Nav = (props) => {
   const [isOpen, setOpen] = useState(true);
+  console.log(useRouteMatch().path);
 
   return (
     <nav

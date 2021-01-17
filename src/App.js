@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/my-pages">
       <div className="App">
         <Nav />
         <div className="container-fluid p-0">
