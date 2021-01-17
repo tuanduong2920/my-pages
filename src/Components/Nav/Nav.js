@@ -1,27 +1,26 @@
 import React, { useState } from "react";
 import { Collapse } from "reactstrap";
 
-import { NavLink, useRouteMatch } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import Avatar from '../../assets/img/Capture.PNG';
 
 const Nav = (props) => {
   const [isOpen, setOpen] = useState(true);
-  console.log(useRouteMatch().path);
-
   return (
     <nav
       className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
       id="sideNav"
     >
-      <a className="navbar-brand js-scroll-trigger" href="#page-top">
+      <Link className="navbar-brand js-scroll-trigger" to="/">
         <span className="d-block d-lg-none">Tuan Duong</span>
         <span className="d-none d-lg-block">
           <img
             className="img-fluid img-profile rounded-circle mx-auto mb-2"
-            src="assets/img/profile.jpg"
+            src={Avatar}
             alt=""
           />
         </span>
-      </a>
+      </Link>
       <button
         className="navbar-toggler"
         onClick={() => setOpen(!isOpen)}

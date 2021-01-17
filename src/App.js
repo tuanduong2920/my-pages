@@ -5,11 +5,12 @@ import Nav from "./Components/Nav/Nav";
 
 import Routes from "./Router/Router";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route,HashRouter } from "react-router-dom";
 
 function App() {
   return (
-    <Router basename="/my-pages">
+    <HashRouter hashType="noslash" >
+      
       <div className="App">
         <Nav />
         <div className="container-fluid p-0">
@@ -22,7 +23,8 @@ function App() {
           <Interests /> */}
         </div>
       </div>
-    </Router>
+     
+    </HashRouter>
   );
 }
 
