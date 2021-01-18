@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/my-pages/static/css/main.333d2343.chunk.css",
-    "main.js": "/my-pages/static/js/main.7ed2f026.chunk.js",
-    "main.js.map": "/my-pages/static/js/main.7ed2f026.chunk.js.map",
+    "main.js": "/my-pages/static/js/main.15dd7dcf.chunk.js",
+    "main.js.map": "/my-pages/static/js/main.15dd7dcf.chunk.js.map",
     "runtime-main.js": "/my-pages/static/js/runtime-main.16937620.js",
     "runtime-main.js.map": "/my-pages/static/js/runtime-main.16937620.js.map",
     "static/js/2.971dc032.chunk.js": "/my-pages/static/js/2.971dc032.chunk.js",
@@ -12,12 +12,13 @@
     "index.html": "/my-pages/index.html",
     "static/css/main.333d2343.chunk.css.map": "/my-pages/static/css/main.333d2343.chunk.css.map",
     "static/js/2.971dc032.chunk.js.LICENSE.txt": "/my-pages/static/js/2.971dc032.chunk.js.LICENSE.txt",
-    "static/media/Capture.e3c82e27.PNG": "/my-pages/static/media/Capture.e3c82e27.PNG"
+    "static/media/Capture.e3c82e27.PNG": "/my-pages/static/media/Capture.e3c82e27.PNG",
+    "static/media/myCV.ce96f55a.pdf": "/my-pages/static/media/myCV.ce96f55a.pdf"
   },
   "entrypoints": [
     "static/js/runtime-main.16937620.js",
     "static/js/2.971dc032.chunk.js",
     "static/css/main.333d2343.chunk.css",
-    "static/js/main.7ed2f026.chunk.js"
+    "static/js/main.15dd7dcf.chunk.js"
   ]
 }
