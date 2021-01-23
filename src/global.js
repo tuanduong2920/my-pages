@@ -1,0 +1,1 @@
+export const SERVER = 'https://server-page.herokuapp.com';

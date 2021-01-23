@@ -1,33 +1,31 @@
-import About from "../Pages/About/About";
-import Education from "../Pages/Education/Education";
-import Interests from "../Pages/Interests/Interests";
-import Skills from "../Pages/Skill/Skill";
+
+import { lazy } from "react";
 
 const Routes = [
   {
     path: "/interests",
-    component: Interests,
+    component: lazy(() => import("../Pages/Interests/Interests")),
     exact: true,
   },
   {
     path: "/education",
-    component: Education,
+    component: lazy(() => import("../Pages/Education/Education")),
     exact: true,
   },
   {
     path: "/skills",
-    component: Skills,
+    component: lazy(() => import("../Pages/Skill/Skill")),
     exact: true,
   },
   {
     path: "/about",
-    component: About,
+    component: lazy(() => import("../Pages/About/About")),
     exact: true,
   },
   {
     path: "/",
-    component: About,
-    exact: true,
+    component: lazy(() => import("../Pages/About/About")),
+    exact: false,
   },
 ];
 

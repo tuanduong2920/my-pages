@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { Collapse } from "reactstrap";
 
 import { NavLink, Link } from "react-router-dom";
-import Avatar from '../../assets/img/Capture.PNG';
+import Avatar from "../../assets/img/Capture.PNG";
 
 const Nav = (props) => {
   const [isOpen, setOpen] = useState(true);
+
   return (
     <nav
       className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
