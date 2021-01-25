@@ -1,18 +1,27 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+import { Spinner } from "reactstrap";
 
 import { AboutContext } from "../../Provider/About/AboutContext";
 
 const About = (props) => {
+  const [aboutState, setAboutState] = useState({
+    loading: false,
+  });
+
   const context = useContext(AboutContext);
-  const {about , getCv} = context
+  const { about, getCv } = context;
   const { name, address, age, description, email, job, link } = about;
+
+  const onClickGetCv = async () => {
+    setAboutState({ loading: true });
+    await getCv();
+    setAboutState({ loading: false });
+  };
 
   let linkSocial = {};
   if (link !== undefined) {
     linkSocial = link;
   }
-
-
   const { linkedin, github, facebook } = linkSocial;
 
   //handle description
@@ -20,6 +29,11 @@ const About = (props) => {
   if (description !== undefined) {
     descriptionArr = description.split(".");
     descriptionArr.pop();
+  }
+
+  let spinner = "";
+  if (aboutState.loading) {
+    spinner = <Spinner size="sm" />;
   }
 
   return (
@@ -55,19 +69,15 @@ const About = (props) => {
               <span>{content}.</span> <br />
             </span>
           ))}
-
-          {/* My name is Duong and i'm a front-end web
-          developer.
-          <br />
-          I’m serious about my work but quite easy-going in life.
-          <br />
-          As a front-end web developer, I have experience in using javascript
-          frameworks to build a web application. */}
         </p>
 
         <div className="mb-5">
-          <button className="btn" onClick={getCv}>
-            Download CV
+          <button
+            className="btn"
+            disabled={aboutState.loading}
+            onClick={onClickGetCv}
+          >
+            {spinner} Download CV
           </button>
         </div>
 

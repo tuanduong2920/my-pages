@@ -50,7 +50,7 @@ const Skill = (props) => {
         <div className="subheading mb-3 mt-3">KNOWLEDGE</div>
         <ul className="fa-ul mb-0">
           {knows.map((item, inx) => (
-            <li>
+            <li key={inx}>
               <span className="fa-li">
                 <i className="fas fa-check"></i>
               </span>

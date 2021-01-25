@@ -1,10 +1,13 @@
 import axios from "axios";
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect, useContext } from "react";
 import { SERVER } from "../../global";
+import { AppContext } from "../App/AppContext";
 
 export const AboutContext = createContext();
 
 const AboutContextProvider = (props) => {
+  const appContext = useContext(AppContext);
+  const { loaded, setLoading } = appContext;
   const [about, setAbout] = useState({});
 
   useEffect(() => {
@@ -12,9 +15,11 @@ const AboutContextProvider = (props) => {
   }, []);
 
   const getDataAbout = async () => {
+    setLoading();
     const { data } = await axios.get(`${SERVER}/about`);
 
     setAbout(data);
+    loaded();
   };
 
   const getCv = async () => {
@@ -24,7 +29,6 @@ const AboutContextProvider = (props) => {
     const cvUrl = URL.createObjectURL(pdf);
 
     window.open(cvUrl, "_blank");
-
   };
 
   const aboutContextData = {
