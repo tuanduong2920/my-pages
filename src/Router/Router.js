@@ -23,6 +23,11 @@ const Routes = [
     exact: true,
   },
   {
+    path: "/project",
+    component: lazy(() => import("../Pages/Project/Project")),
+    exact: true,
+  },
+  {
     path: "/",
     component: lazy(() => import("../Pages/About/About")),
     exact: false,

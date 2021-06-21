@@ -64,6 +64,15 @@ const Nav = (props) => {
             <NavLink
               className="nav-link js-scroll-trigger"
               activeClassName="active"
+              to="/project"
+            >
+              Project
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              className="nav-link js-scroll-trigger"
+              activeClassName="active"
               to="/interests"
             >
               Interests

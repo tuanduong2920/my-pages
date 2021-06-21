@@ -8,6 +8,7 @@ import SkillsContextProvider from "./Provider/Skills/SkillsContext";
 import InterestsContextProvider from "./Provider/Interests/InterestsContext";
 import Layout from "./Components/Layout/Layout";
 import AppContextProvider from "./Provider/App/AppContext";
+import ProjectsContextProvider from "./Provider/Project/ProjectContext";
 
 function App() {
   return (
@@ -17,11 +18,13 @@ function App() {
           <EducationContextProvider>
             <SkillsContextProvider>
               <InterestsContextProvider>
-                <Suspense fallback={<div>...</div>}>
-                  <div className="App">
-                    <Layout></Layout>
-                  </div>
-                </Suspense>
+                <ProjectsContextProvider>
+                  <Suspense fallback={<div>...</div>}>
+                    <div className="App">
+                      <Layout></Layout>
+                    </div>
+                  </Suspense>
+                </ProjectsContextProvider>
               </InterestsContextProvider>
             </SkillsContextProvider>
           </EducationContextProvider>
